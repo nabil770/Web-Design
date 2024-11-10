@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gelap {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            z-index: 2;
+            background-color: black;
+            opacity: 0.4;
+            animation: 2s opacity;
+        }
+        @keyframes opacity {
+            from {opacity: 0;}
+            to{opacity: 0.4;}
+        }
+button {
+  font-size: 15px;
+  letter-spacing: 2px;
+  background-color: transparent;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.8em 2em;
+  border: 3px solid  	#F4BB44;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0px 0px 10px black;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color:  	#F4BB44;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.layar-responsive {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 999;
+  background-color: white;
+  color: black;
+  display: none;
+  text-align: center;
+}
+@media screen and (max-width: 1669px) {
+  .gelap, .button {
+    display: none;
+  }
+  .layar-responsive {
+    display: block;
+  }
+}
+
+button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color:  	#F4BB44;
+  z-index: -1;
+}
+
+button:hover, button:focus {
+  color: white;
+}
+
+button:hover:before, button:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+</head>
+<body style="width: 100vw; height: 100vh; color: white; overflow: hidden; padding: 0; margin: 0;">
+    <div class="background">
+        <video autoplay loop muted style="height: 120%; left: -10%; z-index: 0; position: absolute; width: 120%;">
+            <source src="manor-lords-moewalls-com.mp4">
+        </video>
+    </div>
+    <div class="gelap"></div>
+    <div style="position: absolute; z-index: 100; display: flex; justify-content: center; align-items: center; width: 40%; height: 100vh;" class="content">
+        <div class="in-content">
+            <h1 style='font-family: "Anton SC", sans-serif; font-weight: 400; font-size: 50px; text-shadow: 0px 0px 10px black; letter-spacing: 5px; font-style: normal;' class="welcome">Selamat Datang Kesatria</h1>
+            <h1 style='font-family: "Anton SC", sans-serif; font-weight: 400; font-style: normal; letter-spacing: 10px; text-shadow: 0px 0px 12px black;' class="profile">Ingin Melihat Profilku ?</h1>
+          <form action="biodata.html">
+          <div class="ok">
+            <button> Tentu Saja ! </button>
+          </form>
+        </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/scr  ollreveal"></script>
+    <script>
+      ScrollReveal().reveal('.welcome', { reset: true, origin: 'left', duration: 3000, distance: '100%' });
+      ScrollReveal().reveal('.profile', { reset: true, duration: 4000, distance: '100%' });
+      ScrollReveal().reveal('.ok', { reset: true, origin: 'left', duration: 4000, distance: '100%' });
+    </script>
+    <script>
+      alert("Perhatian !!")
+      alert("Web ini tidak responsive, karena yang buat males wkkwkwk :v")
+      alert("Jadi, kalau misal ada kesalahan pada UI, silahkan disesuaikan ukuran page Browser Anda !!")
+    </script>
+    <div class="layar-responsive">
+      <h1>MAAF WEBSITE SAYA TIDAK MENDUKUNG FITUR RESPONSIVE :(</h1>
+    </div>
+</body>
+</html>
